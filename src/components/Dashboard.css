@@ -1,0 +1,14 @@
+body {
+    background: #638ab1;
+}
+
+.bg-info {
+    color: #0e1010;
+}
+.bg-info:hover {
+    background: #fff;
+    border: 3px solid #309691;
+    color: #fff;
+    margin: 4px;
+   /*  background-color: #fff; */
+}
