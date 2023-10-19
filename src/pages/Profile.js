@@ -96,7 +96,7 @@ function Profile() {
                 <h5 className="ps-2"> Senior Front-End Developer</h5>
               </Col>
               <Col>
-                <h5 className="p-2  float-end"> 2018 - Date</h5>
+                <h5 className="p-2  float-end"> 2018 - 2020</h5>
               </Col>
             </Row>
 
@@ -107,7 +107,7 @@ function Profile() {
                 <h5 className="ps-2">software Developer</h5>
               </Col>
               <Col>
-                <h5 className="p-2  float-end"> 2021 - Date</h5>
+                <h5 className="p-2  float-end"> 2020 - Date</h5>
               </Col>
             </Row>
             <hr></hr>
@@ -115,7 +115,7 @@ function Profile() {
               <Col>
                 <h4 className="fs-2 ps-2">Skills</h4>
                 <h5 className="ps-2">
-                  HTML, CSS, JavaScript, Bootstrap, Git, React,Azure, C#, ASP
+                  HTML, CSS, JavaScript, Bootstrap, Git, React, Azure, C#, ASP
                   MVC, .NET,{" "}
                 </h5>
               </Col>

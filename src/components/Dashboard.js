@@ -2,12 +2,11 @@ import React from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import Profile from "../pages/Profile";
 import Stopwatch from "../pages/stopwatch/Stopwatch";
-import Calender from "../pages/Calender";
 import Calculator from "../pages/calculator/Calculator";
 import Quiz from "../pages/Quiz/Quiz";
 import Weather from "../pages/Weather";
+import Dictionary from "../pages/Dictionary/Dictionary";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Dashboard.css";
 
@@ -57,36 +56,17 @@ function Dashboard(props) {
                     viewBox="0 0 576 692"
                   >
                     <path
-                      d="M32 0C14.3 0 0 14.3 0 32S14.3 64 32 64V75c0 42.4 16.9 83.1 46.9 
-                                      113.1L146.7 256 78.9 323.9C48.9 353.9 32 394.6 32 437v11c-17.7 0-32 14.3-32
-                                       32s14.3 32 32 32H64 320h32c17.7 0 32-14.3 32-32s-14.3-32-32-32V437c0-42.4-16
-                                       .9-83.1-46.9-113.1L237.3 256l67.9-67.9c30-30 46.9-70.7 46.9-113.1V64c17.7 0
-                                       32-14.3 32-32s-14.3-32-32-32H320 64 32zM288 437v11H96V437c0-25.5 10.1-49.9
-                                        28.1-67.9L192 301.3l67.9 67.9c18 18 28.1 42.4 28.1 67.9z"
+                      d="M0 32C0 14.3 14.3 0 32 0H64 320h32c17.7 0 32 14.3 32 32s-14.3 32-32
+                     32V75c0 42.4-16.9 83.1-46.9 113.1L237.3 256l67.9 67.9c30 30 46.9 70.7 46.9
+                      113.1v11c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 64 32c-17.7 0-32-14.3-32-32s14.3-32
+                      32-32V437c0-42.4 16.9-83.1 46.9-113.1L146.7 256 78.9 188.1C48.9 158.1 32 117.4 32 75V64C14.3
+                       64 0 49.7 0 32zM96 64V75c0 25.5 10.1 49.9 28.1 67.9L192 210.7l67.9-67.9c18-18 28.1-42.4 28.
+                       1-67.9V64H96zm0 384H288V437c0-25.5-10.1-49.9-28.1-67.9L192 301.3l-67.9 67.9c-18 18-28.1 42.4-28.1
+                        67.9v11z"
                     />
                   </svg>
                   <button className="bg-info border border-info mx-3 ps-1">
                     Stopwatch
-                  </button>
-                </Link>
-
-                <Link className="bg-info rounded mb-2" to="/calender">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1.5em"
-                    viewBox="0 0 576 692"
-                  >
-                    <path
-                      d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H64C28.7 64 0 92.7
-                                       0 128v16 48V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192 144
-                                        128c0-35.3-28.7-64-64-64H344V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H152V24zM48
-                                         192h80v56H48V192zm0 104h80v64H48V296zm128 0h96v64H176V296zm144 0h80v64H320V296zm80-48H320V192h80v56zm0
-                                          160v40c0 8.8-7.2 16-16 16H320V408h80zm-128 0v56H176V408h96zm-144 0v56H64c-8.8 0-16-7.2-16-16V408h80zM272
-                                          248H176V192h96v56z"
-                    />
-                  </svg>
-                  <button className="bg-info border border-info mx-3 ps-1">
-                    Calender
                   </button>
                 </Link>
 
@@ -137,26 +117,55 @@ function Dashboard(props) {
                     viewBox="0 0 576 692"
                   >
                     <path
-                      d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61
-                                      .9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7
-                                       0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7
-                                        .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"
+                      d="M0 224c0 53 43 96 96 96h47.2L290 202.5c17.6-14.1 42.6-14 60.2 .2s22.8
+                     38.6 12.8 58.8L333.7 320H352h64c53 0 96-43 96-96s-43-96-96-96c-.5 0-1.1 0-1.6
+                      0c1.1-5.2 1.6-10.5 1.6-16c0-44.2-35.8-80-80-80c-24.3 0-46.1 10.9-60.8 28C256.5
+                       24.3 219.1 0 176 0C114.1 0 64 50.1 64 112c0 7.1 .7 14.1 1.9 20.8C27.6 145.4 0
+                        181.5 0 224zm330.1 3.6c-5.8-4.7-14.2-4.7-20.1-.1l-160 128c-5.3 4.2-7.4 11.4-5.1
+                         17.8s8.3 10.7 15.1 10.7h70.1L177.7 488.8c-3.4 6.7-1.6 14.9 4.3 19.6s14.2 4.7 20.1
+                          .1l160-128c5.3-4.2 7.4-11.4 5.1-17.8s-8.3-10.7-15.1-10.7H281.9l52.4-104.8c3.4-6.7
+                           1.6-14.9-4.2-19.6z"
                     />
                   </svg>
                   <button className="bg-info border border-info mx-3 ps-1">
                     Weather
                   </button>
                 </Link>
+
+                <Link className="bg-info rounded mb-2" to="/dictionary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1.5em"
+                    viewBox="0 0 576 692"
+                  >
+                    <path
+                      d="M0 96C0 43 43 0 96 0H384h32c17.7 0 32 14.3 32 32V352c0 17.7-14.3 
+                    32-32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32H384 96c-53 0-96-43-96-96V96zM64
+                     416c0 17.7 14.3 32 32 32H352V384H96c-17.7 0-32 14.3-32 32zM247.4 283.8c-3.7 3.7-6.2
+                      4.2-7.4 4.2s-3.7-.5-7.4-4.2c-3.8-3.7-8-10-11.8-18.9c-6.2-14.5-10.8-34.3-12.2-56.9h63c-1.5
+                       22.6-6 42.4-12.2 56.9c-3.8 8.9-8 15.2-11.8 18.9zm42.7-9.9c7.3-18.3 12-41.1 13.4-65.9h31.1c-4.7
+                        27.9-21.4 51.7-44.5 65.9zm0-163.8c23.2 14.2 39.9 38 44.5 65.9H303.5c-1.4-24.7-6.1-47.5-13.4-65
+                        .9zM368 192a128 128 0 1 0 -256 0 128 128 0 1 0 256 0zM145.3 208h31.1c1.4 24.7 6.1 47.5 13.4 65
+                        .9c-23.2-14.2-39.9-38-44.5-65.9zm31.1-32H145.3c4.7-27.9 21.4-51.7 44.5-65.9c-7.3 18.3-12 41.1-13.4
+                        65.9zm56.1-75.8c3.7-3.7 6.2-4.2 7.4-4.2s3.7 .5 7.4 4.2c3.8 3.7 8 10 11.8 18.9c6.2 14.5 10.8 34.3 12.2
+                        56.9h-63c1.5-22.6 6-42.4 12.2-56.9c3.8-8.9 8-15.2 11.8-18.9z"
+                    />
+                  </svg>
+                  <button className="bg-info border border-info mx-3 ps-1">
+                    Dictionary
+                  </button>
+                </Link>
+
               </Row>
             </Col>
             <Col>
               <Routes>
                 <Route exact path="/" element={<Profile />} />
                 <Route path="/stopwatch" element={<Stopwatch />} />
-                <Route path="/calender" element={<Calender />} />
                 <Route path="/calculator" element={<Calculator />} />
                 <Route path="/quiz" element={<Quiz />} />
                 <Route path="/weather" element={<Weather />} />
+                <Route path="/dictionary" element={<Dictionary />} />
               </Routes>
             </Col>
           </Row>

@@ -56,7 +56,7 @@ function Quiz() {
 
   return (
     <div className="">
-      <Container className="p-5 w-100">
+      <Container className="p-5 col-xl-5 col-sm-5">
         <Card className="mt-5">
           <Card.Body>
             <div>

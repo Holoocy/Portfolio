@@ -22,39 +22,40 @@ function Weather() {
   };
 
   return (
-    <div className="text-center mt-5">
-      <header>
-        <h1>Weather Forecast</h1>
-
-        <div>
-          <input
-            className="p-2 mb-4"
-            type="text"
-            placeholder="Enter city/town..."
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <button className="btn btn-success btn-lg" onClick={searchPressed}>
-            Search
-          </button>
-        </div>
-
-        {/* If weather is not undefined display results from API */}
-        {typeof weather.main !== "undefined" ? (
-          <div className=" m-2">
-            {/* Location  */}
-            <h3>{weather.name}</h3>
-
-            {/* Temperature Celsius  */}
-            <h4>{weather.main.temp}°C</h4>
-
-            {/* Condition (Sunny ) */}
-            <h4>{weather.weather[0].main}</h4>
-            <h4>({weather.weather[0].description})</h4>
+    <div className="text-center m-5">
+      <h1 className="pt-5 m-2">Weather Forecast</h1>
+      <div>
+        <header>
+          <div>
+            <input
+              className="p-2 "
+              type="text"
+              placeholder="Enter city/town..."
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <button className="btn btn-success btn-lg" onClick={searchPressed}>
+              Search
+            </button>
           </div>
-        ) : (
-          ""
-        )}
-      </header>
+
+          {/* If weather is not undefined display results from API */}
+          {typeof weather.main !== "undefined" ? (
+            <div className=" m-2">
+              {/* Location  */}
+              <h3>{weather.name}</h3>
+
+              {/* Temperature Celsius  */}
+              <h4>{weather.main.temp}°C</h4>
+
+              {/* Condition (Sunny ) */}
+              <h4>{weather.weather[0].main}</h4>
+              <h4>({weather.weather[0].description})</h4>
+            </div>
+          ) : (
+            ""
+          )}
+        </header>
+      </div>
     </div>
   );
 }
